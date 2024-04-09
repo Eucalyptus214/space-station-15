@@ -2,7 +2,7 @@
 
 Space Station 15 is a remake of Space Station 13 that runs in [love2d](https://love2d.org/) using a special toolset.
 
-Ever imagined space station 13 with ascii graphics? Probably not. Well, this game is exactly that. Space Station 13, but there's text graphics instead, well, that's not really the only difference.
+Ever imagined space station 13 with ascii graphics? Probably not. Space Station 15 is a Space Station 13 remake that includes ascii graphics and absolutely 0 mouse support.
 
 This is the primary repository for Space Station 15.
 

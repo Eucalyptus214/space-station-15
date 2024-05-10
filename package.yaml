@@ -28,6 +28,7 @@ dependencies:
 - network-udp == 0
 - containers
 - directory
+- OpenAL >= 1.7
 
 ghc-options:
 - -Wall

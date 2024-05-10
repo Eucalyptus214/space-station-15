@@ -26,6 +26,11 @@ source-repository head
 library
   exposed-modules:
       Actions
+      Data.Character
+      Data.DamageType
+      Data.Vector
+      Data.Wearable
+      Imports
       Main
       Settings
   other-modules:
@@ -34,7 +39,8 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      apecs >=9.6
+      OpenAL >=1.7
+    , apecs >=9.6
     , base >=4.9 && <5
     , containers
     , directory
@@ -48,13 +54,19 @@ executable space-station15-exe
   main-is: Main.hs
   other-modules:
       Actions
+      Data.Character
+      Data.DamageType
+      Data.Vector
+      Data.Wearable
+      Imports
       Settings
       Paths_space_station15
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      apecs >=9.6
+      OpenAL >=1.7
+    , apecs >=9.6
     , base >=4.9 && <5
     , containers
     , directory

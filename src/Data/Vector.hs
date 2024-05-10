@@ -1,4 +1,4 @@
 module Data.Vector( Vector(..)
-             ) where
+                  ) where
 
 data Vector = Vector Int Int deriving (Show, Read, Eq, Ord)

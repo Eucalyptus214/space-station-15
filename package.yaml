@@ -29,6 +29,8 @@ dependencies:
 - containers
 - directory
 - OpenAL >= 1.7
+- sdl2-image >= 2.1
+
 
 ghc-options:
 - -Wall

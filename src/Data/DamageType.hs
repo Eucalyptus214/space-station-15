@@ -2,10 +2,13 @@ module Data.DamageType( DamageType(..)
                       , defaultResistances
                       ) where
 
+import qualified Data.Map as M
+
 data DamageType = Heat | Shock | Cold | Caustic | Blunt | Slash | Piercing | Biological | Asphyxiation | Poison | Radiation | Bloodloss | Cellular
                   deriving (Eq, Read, Show)
 
-defaultResistances :: Map DamageType Float
+-- precentages
+defaultResistances :: M.Map DamageType Float
 defaultResistances = [ (Heat, 0)
                      , (Shock, 0)
                      , (Cold, 0)
@@ -20,3 +23,4 @@ defaultResistances = [ (Heat, 0)
                      , (Bloodloss, 0)
                      , (Cellular, 0)
                      ]
+

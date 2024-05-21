@@ -22,15 +22,14 @@ description:         Please see the README on GitHub at <https://github.com/gith
 dependencies:
 - base >= 4.9 && < 5
 - apecs >= 9.6
-- sdl2 >= 2.5
+- gloss >= 1.13
+- apecs-gloss >= 0.2
 - yaml >= 0.11
 - network >= 3.2
 - network-udp == 0
 - containers
 - directory
 - OpenAL >= 1.7
-- sdl2-image >= 2.1
-
 
 ghc-options:
 - -Wall

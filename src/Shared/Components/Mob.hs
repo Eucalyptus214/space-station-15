@@ -1,3 +1,5 @@
+{-# LANGUAGE TypeFamilies               #-}
+
 module Shared.Components.Mob( Mob(..)
                             ) where
 
@@ -9,5 +11,6 @@ data Mob = Mob { name :: String
               , limbs :: [Entity]
               , consciousness :: MobConsciousness
               , state :: MobState
-              } deriving Show
+              }
+              deriving Show
 instance Component Mob where type Storage Mob = Map Mob

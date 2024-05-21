@@ -8,3 +8,4 @@ import Shared.Components.Mob
 import Shared.Components.Movement
 import Shared.Components.Target
 import Shared.Components.Tile
+import Shared.Components.Transform

@@ -6,10 +6,11 @@ module Data.Mob( MobState(..)
                ) where
 
 import Data.DamageType
+import qualified Data.Map as M
 
-data MobState = Alive | Critical | Dead
-data MovingState = Running | Walking | Crawling
-data HealthState = Good | Poor | Bad | ReallyBad | Critical | Dead
+data MobState = Alive | Critical | Dead deriving (Show, Read, Eq)
+data MovingState = Running | Walking | Crawling deriving (Show, Read, Eq)
+data HealthState = Good | Poor | Bad | ReallyBad | Critical | Dead deriving (Show, Read, Eq)
 
 getHealthState :: Float -> Float -> HealthState
 getHealthState health maxHealth
@@ -24,6 +25,5 @@ getHealthState health maxHealth
         minBadHealth = minCritHealth + minMediocreHealth / 2
         minReallyBadHealth = minCritHealth + minBadHealth / 2
 
-calcHealth :: [(DamageType, Float)] -> Float -> Float
-calcHealth [] maxHealth = maxHealth
-calcHealth ((_, x):xs) maxHealth = maxHealth - x + (calcHealth xs 0)
+calcHealth :: Float -> M.Map DamageType Float -> M.Map DamageType Float -> Float
+calcHealth maxHealth damage resistance = foldl (\acc (t, x) -> maxHealth - (x * ((100 - (lookup t resistance)) / 100))) maxHealth damage

@@ -18,6 +18,7 @@ import Data.Monoid
 import Data.Semigroup (Semigroup)
 
 import Imports.Client
+import Imports.Shared
 
 import OpenAL
 

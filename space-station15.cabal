@@ -31,6 +31,7 @@ library
       Client.Components.Velocity
       Client.Components.Wearable
       Data.DamageType
+      Data.Mob
       Imports.Client
       Imports.Server
       Main
@@ -62,6 +63,7 @@ executable space-station15-exe
       Client.Components.Velocity
       Client.Components.Wearable
       Data.DamageType
+      Data.Mob
       Imports.Client
       Imports.Server
       Settings

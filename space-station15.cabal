@@ -26,16 +26,27 @@ source-repository head
 library
   exposed-modules:
       Actions
-      Client.Components.Mob
-      Client.Components.Position
-      Client.Components.Velocity
-      Client.Components.Wearable
+      Client.Components.Sprite
+      Client.Components.Visible
       Data.DamageType
+      Data.Gas
+      Data.Material
       Data.Mob
+      Data.MovementMode
+      Data.Vector
       Imports.Client
       Imports.Server
+      Imports.Shared
       Main
       Settings
+      Shared.Components.Clothing
+      Shared.Components.Examinable
+      Shared.Components.Health
+      Shared.Components.Mind
+      Shared.Components.Mob
+      Shared.Components.Movement
+      Shared.Components.Target
+      Shared.Components.Tile
   other-modules:
       Paths_space_station15
   hs-source-dirs:
@@ -58,15 +69,26 @@ executable space-station15-exe
   main-is: Main.hs
   other-modules:
       Actions
-      Client.Components.Mob
-      Client.Components.Position
-      Client.Components.Velocity
-      Client.Components.Wearable
+      Client.Components.Sprite
+      Client.Components.Visible
       Data.DamageType
+      Data.Gas
+      Data.Material
       Data.Mob
+      Data.MovementMode
+      Data.Vector
       Imports.Client
       Imports.Server
+      Imports.Shared
       Settings
+      Shared.Components.Clothing
+      Shared.Components.Examinable
+      Shared.Components.Health
+      Shared.Components.Mind
+      Shared.Components.Mob
+      Shared.Components.Movement
+      Shared.Components.Target
+      Shared.Components.Tile
       Paths_space_station15
   hs-source-dirs:
       src

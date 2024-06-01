@@ -1,6 +1,6 @@
 <p align="center"> <img alt="Space Station 15" width="880" height="300" src="https://github.com/Eucalyptus214/space-station-15/blob/main/assets/images/banner-bg.svg" /></p>
 
-Space Station 15 is a remake of Space Station 13 in haskell using [apecs](https://hackage.haskell.org/package/apecs) and [sdl2](https://hackage.haskell.org/package/sdl2). Other dependencies can be found in the [package.yaml](https://github.com/Eucalyptus214/space-station-15/blob/main/package.yaml) file.
+Space Station 15 is a remake of Space Station 13 in haskell using [apecs](https://hackage.haskell.org/package/apecs) and [gloss](https://hackage.haskell.org/package/gloss). Other dependencies can be found in the [package.yaml](https://github.com/Eucalyptus214/space-station-15/blob/main/package.yaml) file.
 
 This is the primary repository for Space Station 15.
 
@@ -8,17 +8,25 @@ This is the primary repository for Space Station 15.
 [Discord](https://discord.gg/SmKawHZfJc)
 
 ## Building
+Please see [the haskell tool stack](https://docs.haskellstack.org/en/stable/) to install Stack.
+
 within the project folder, run:
 ```
 stack build
 ```
 
-to run the executable:
+to run the client, do:
 ```
-stack exec space-station15-exe
+stack exec space-station15-client
 ```
 
-the target directory will always be `./.stack-work/`.
+to run the server, do:
+```
+stack exec space-station15-server
+```
+
+the target executable directory will always be `./.stack-work/`.
+Any errors encountered should be reported to the #coderbus channel in the discord server.
 
 ## Licence
 

@@ -28,26 +28,36 @@ library
       Actions
       Client.Components.Sprite
       Client.Components.Visible
+      Client_Main
+      Data.Access
       Data.DamageType
       Data.Gas
       Data.GunMode
       Data.Material
       Data.Mob
       Data.MovementMode
+      Data.Player
+      Data.ToolQuality
       Data.Vector
       Imports.Client
       Imports.Server
       Imports.Shared
-      Main
+      Imports.UI
+      Prototypes
+      Server_Main
       Settings
+      Shared.Components.Access
       Shared.Components.Clothing
       Shared.Components.Examinable
       Shared.Components.Health
+      Shared.Components.ID
       Shared.Components.Mind
       Shared.Components.Mob
       Shared.Components.Movement
+      Shared.Components.PoweredDevice
       Shared.Components.Target
       Shared.Components.Tile
+      Shared.Components.Tool
       Shared.Components.Transform
   other-modules:
       Paths_space_station15
@@ -56,42 +66,52 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       OpenAL >=1.7
-    , apecs >=9.6
+    , apecs
     , apecs-gloss >=0.2
     , base >=4.9 && <5
     , containers
     , directory
     , gloss >=1.13
-    , network >=3.2
-    , network-udp ==0
+    , network
+    , network-udp
     , yaml >=0.11
   default-language: Haskell2010
 
-executable space-station15-exe
-  main-is: Main.hs
+executable space-station15-client
+  main-is: Client_Main.hs
   other-modules:
       Actions
       Client.Components.Sprite
       Client.Components.Visible
+      Data.Access
       Data.DamageType
       Data.Gas
       Data.GunMode
       Data.Material
       Data.Mob
       Data.MovementMode
+      Data.Player
+      Data.ToolQuality
       Data.Vector
       Imports.Client
       Imports.Server
       Imports.Shared
+      Imports.UI
+      Prototypes
+      Server_Main
       Settings
+      Shared.Components.Access
       Shared.Components.Clothing
       Shared.Components.Examinable
       Shared.Components.Health
+      Shared.Components.ID
       Shared.Components.Mind
       Shared.Components.Mob
       Shared.Components.Movement
+      Shared.Components.PoweredDevice
       Shared.Components.Target
       Shared.Components.Tile
+      Shared.Components.Tool
       Shared.Components.Transform
       Paths_space_station15
   hs-source-dirs:
@@ -99,14 +119,68 @@ executable space-station15-exe
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       OpenAL >=1.7
-    , apecs >=9.6
+    , apecs
     , apecs-gloss >=0.2
     , base >=4.9 && <5
     , containers
     , directory
     , gloss >=1.13
-    , network >=3.2
-    , network-udp ==0
+    , network
+    , network-udp
+    , space-station15
+    , yaml >=0.11
+  default-language: Haskell2010
+
+executable space-station15-server
+  main-is: Server_Main.hs
+  other-modules:
+      Actions
+      Client.Components.Sprite
+      Client.Components.Visible
+      Client_Main
+      Data.Access
+      Data.DamageType
+      Data.Gas
+      Data.GunMode
+      Data.Material
+      Data.Mob
+      Data.MovementMode
+      Data.Player
+      Data.ToolQuality
+      Data.Vector
+      Imports.Client
+      Imports.Server
+      Imports.Shared
+      Imports.UI
+      Prototypes
+      Settings
+      Shared.Components.Access
+      Shared.Components.Clothing
+      Shared.Components.Examinable
+      Shared.Components.Health
+      Shared.Components.ID
+      Shared.Components.Mind
+      Shared.Components.Mob
+      Shared.Components.Movement
+      Shared.Components.PoweredDevice
+      Shared.Components.Target
+      Shared.Components.Tile
+      Shared.Components.Tool
+      Shared.Components.Transform
+      Paths_space_station15
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      OpenAL >=1.7
+    , apecs
+    , apecs-gloss >=0.2
+    , base >=4.9 && <5
+    , containers
+    , directory
+    , gloss >=1.13
+    , network
+    , network-udp
     , space-station15
     , yaml >=0.11
   default-language: Haskell2010

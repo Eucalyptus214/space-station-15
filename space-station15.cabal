@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.36.0.
+-- This file has been generated from package.yaml by hpack version 0.37.0.
 --
 -- see: https://github.com/sol/hpack
 
@@ -25,37 +25,33 @@ source-repository head
 
 library
   exposed-modules:
-      Actions
-      Client.Components.Sprite
-      Client.Components.Visible
-      Client_Main
       Data.Access
+      Data.Atmos
       Data.DamageType
-      Data.Gas
       Data.GunMode
       Data.Material
       Data.Mob
       Data.MovementMode
       Data.Player
+      Data.StatusEffect
       Data.ToolQuality
       Data.Vector
-      Imports.Client
-      Imports.Server
       Imports.Shared
-      Imports.UI
       Prototypes
-      Server_Main
-      Settings
+      Server_Settings
       Shared.Components.Access
       Shared.Components.Clothing
       Shared.Components.Examinable
       Shared.Components.Health
       Shared.Components.ID
+      Shared.Components.InputMover
+      Shared.Components.Item
       Shared.Components.Mind
       Shared.Components.Mob
       Shared.Components.Movement
       Shared.Components.PoweredDevice
-      Shared.Components.Target
+      Shared.Components.StatusEffects
+      Shared.Components.Temperature
       Shared.Components.Tile
       Shared.Components.Tool
       Shared.Components.Transform
@@ -65,122 +61,67 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      OpenAL >=1.7
+      GLUT
+    , HDBC
+    , HDBC-sqlite3
+    , OpenAL
     , apecs
-    , apecs-gloss >=0.2
-    , base >=4.9 && <5
+    , base >=4.2 && <5
     , containers
     , directory
-    , gloss >=1.13
+    , gloss
     , network
     , network-udp
-    , yaml >=0.11
+    , sdl2
   default-language: Haskell2010
 
 executable space-station15-client
-  main-is: Client_Main.hs
+  main-is: Main.hs
   other-modules:
-      Actions
       Client.Components.Sprite
       Client.Components.Visible
-      Data.Access
-      Data.DamageType
-      Data.Gas
-      Data.GunMode
-      Data.Material
-      Data.Mob
-      Data.MovementMode
-      Data.Player
-      Data.ToolQuality
-      Data.Vector
       Imports.Client
-      Imports.Server
-      Imports.Shared
       Imports.UI
-      Prototypes
-      Server_Main
-      Settings
-      Shared.Components.Access
-      Shared.Components.Clothing
-      Shared.Components.Examinable
-      Shared.Components.Health
-      Shared.Components.ID
-      Shared.Components.Mind
-      Shared.Components.Mob
-      Shared.Components.Movement
-      Shared.Components.PoweredDevice
-      Shared.Components.Target
-      Shared.Components.Tile
-      Shared.Components.Tool
-      Shared.Components.Transform
       Paths_space_station15
   hs-source-dirs:
-      src
+      client
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      OpenAL >=1.7
+      GLUT
+    , HDBC
+    , HDBC-sqlite3
+    , OpenAL
     , apecs
-    , apecs-gloss >=0.2
-    , base >=4.9 && <5
+    , base >=4.2 && <5
     , containers
     , directory
-    , gloss >=1.13
+    , gloss
     , network
     , network-udp
+    , sdl2
     , space-station15
-    , yaml >=0.11
   default-language: Haskell2010
 
 executable space-station15-server
-  main-is: Server_Main.hs
+  main-is: Main.hs
   other-modules:
-      Actions
-      Client.Components.Sprite
-      Client.Components.Visible
-      Client_Main
-      Data.Access
-      Data.DamageType
-      Data.Gas
-      Data.GunMode
-      Data.Material
-      Data.Mob
-      Data.MovementMode
-      Data.Player
-      Data.ToolQuality
-      Data.Vector
-      Imports.Client
       Imports.Server
-      Imports.Shared
-      Imports.UI
-      Prototypes
-      Settings
-      Shared.Components.Access
-      Shared.Components.Clothing
-      Shared.Components.Examinable
-      Shared.Components.Health
-      Shared.Components.ID
-      Shared.Components.Mind
-      Shared.Components.Mob
-      Shared.Components.Movement
-      Shared.Components.PoweredDevice
-      Shared.Components.Target
-      Shared.Components.Tile
-      Shared.Components.Tool
-      Shared.Components.Transform
       Paths_space_station15
   hs-source-dirs:
-      src
+      server
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      OpenAL >=1.7
+      GLUT
+    , HDBC
+    , HDBC-sqlite3
+    , OpenAL
     , apecs
-    , apecs-gloss >=0.2
-    , base >=4.9 && <5
+    , base >=4.2 && <5
     , containers
     , directory
-    , gloss >=1.13
+    , gloss
     , network
     , network-udp
+    , sdl2
     , space-station15
-    , yaml >=0.11
   default-language: Haskell2010

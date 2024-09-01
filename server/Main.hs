@@ -1,3 +1,5 @@
+module Main (main) where
+
 {-# LANGUAGE DataKinds                  #-}
 {-# LANGUAGE FlexibleContexts           #-}
 {-# LANGUAGE FlexibleInstances          #-}
@@ -9,17 +11,13 @@
 {-# LANGUAGE TypeFamilies               #-}
 
 import System.Directory
-import Settings
+import Server_Settings
 import Apecs
 import System.Random
 import System.Exit
 import Control.Monad
 import Data.Monoid
 import Data.Semigroup (Semigroup)
-
-import Imports.Client
-import Imports.Shared
-
-import OpenAL
+import Prototypes
 
 main = putStrLn "Hello, world!"

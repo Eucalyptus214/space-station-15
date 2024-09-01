@@ -1,7 +1,6 @@
 {-# LANGUAGE TypeFamilies               #-}
 
-module Client.Components.Visible( Visible(..)
-                                ) where
+module Client.Components.Visible ( Visible(..) ) where
 
 import Apecs
 

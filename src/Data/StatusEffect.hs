@@ -1,7 +1,6 @@
 module Data.StatusEffect ( StatusEffect(..) ) where
 
 
-import qualified Data.Map
 -- import Data.Disease
 import Data.DamageType
 

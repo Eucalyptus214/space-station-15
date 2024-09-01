@@ -1,3 +1,5 @@
+{-# LANGUAGE TypeFamilies               #-}
+
 module Shared.Components.Temperature
   ( Temperature(..)
   , calcTempInKelvin
@@ -7,11 +9,12 @@ module Shared.Components.Temperature
 import qualified Data.Atmos
 import Apecs
 
-newtype Temperature = Temperature
+data Temperature = Temperature
   { temp :: Data.Atmos.Temperature
   , heat_cap :: Float
   , conductivity :: Float
   } deriving Show
+
 instance Component Temperature where Storage Temperature = Map Temperature
 
 calcTempInKelvin :: Temperature
@@ -25,5 +28,4 @@ type T = Temperature
 calcTemp :: (T, T)
          -> (T, T)
 calcTemp (t1, t2) = (t1{ temp = (calcTemp t1 t2) }, t2{ temp = (calcTemp t2 t1) })
-
 

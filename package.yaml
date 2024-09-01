@@ -32,6 +32,8 @@ dependencies:
 - HDBC
 - HDBC-sqlite3
 - GLUT
+- conversion
+- mono-traversable
 
 ghc-options:
 - -Wall

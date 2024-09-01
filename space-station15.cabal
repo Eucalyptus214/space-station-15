@@ -33,9 +33,11 @@ library
       Data.Mob
       Data.MovementMode
       Data.Player
+      Data.Polar2D
       Data.StatusEffect
       Data.ToolQuality
-      Data.Vector
+      Data.Vector2D
+      Data.Vector3D
       Imports.Shared
       Prototypes
       Server_Settings
@@ -68,8 +70,10 @@ library
     , apecs
     , base >=4.2 && <5
     , containers
+    , conversion
     , directory
     , gloss
+    , mono-traversable
     , network
     , network-udp
     , sdl2
@@ -94,8 +98,10 @@ executable space-station15-client
     , apecs
     , base >=4.2 && <5
     , containers
+    , conversion
     , directory
     , gloss
+    , mono-traversable
     , network
     , network-udp
     , sdl2
@@ -118,8 +124,10 @@ executable space-station15-server
     , apecs
     , base >=4.2 && <5
     , containers
+    , conversion
     , directory
     , gloss
+    , mono-traversable
     , network
     , network-udp
     , sdl2

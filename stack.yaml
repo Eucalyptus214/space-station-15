@@ -48,6 +48,9 @@ extra-deps:
 - HDBC-sqlite3-2.3.3.1
 - OpenAL-1.7.0.5
 - sdl2-2.5.5.0
+- conversion-1.2.1
+- GLUT-2.7.0.16
+- mono-traversable-1.0.17.0
 
 # Override default flag values for local packages and extra-deps
 # flags: {}

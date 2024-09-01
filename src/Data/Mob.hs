@@ -2,10 +2,12 @@ module Data.Mob
   ( MobState(..)
   , HealthState(..)
   , MovingState(..)
+  , MobConsciousness(..)
   , getHealthState
   , calcHealth
   ) where
 
+import Data.Maybe
 import Data.DamageType
 import qualified Data.Map as M
 
@@ -31,4 +33,4 @@ calcHealth :: Float
            -> M.Map DamageType Float
            -> M.Map DamageType Float
            -> Float
-calcHealth maxHealth damage resistance = foldl (\acc (t, x) -> maxHealth - (x * ((100 - (fromMaybe 0 $ M.lookup t resistance)) / 100))) maxHealth damage
+calcHealth maxHealth damage resistance = foldl (\acc (t, x) -> acc - (x * ((100 - (fromMaybe 0 $ M.lookup t resistance)) / 100))) maxHealth (M.toList damage)

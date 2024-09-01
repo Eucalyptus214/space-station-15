@@ -9,7 +9,7 @@ import qualified Data.Map as M
 
 data Tile = Tile
   { reactions :: [ReactionData]
-  , atmos :: AtmosComposition
+  , atmos :: [Gas]
   , rads :: Float
   , material :: M.Map Material Float
   , temperature

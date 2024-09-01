@@ -3,7 +3,7 @@
 module Shared.Components.Transform ( Transform(..) ) where
 
 import Apecs
-import Data.Vector
+import Data.Vector3D
 
 data Transform = Transform
   { position :: Vector3D

@@ -20,16 +20,20 @@ extra-source-files:
 description:         Please see the README on GitHub at <https://github.com/githubuser/space-station-15#readme>
 
 dependencies:
-- base >= 4.9 && < 5
-- gloss >= 1.13
-- apecs-gloss >= 0.2
-- yaml >= 0.11
+- base >= 4.2 && < 5
+- gloss
+- sdl2
 - apecs
 - network
 - network-udp
 - containers
 - directory
-- OpenAL >= 1.7
+- OpenAL
+- HDBC
+- HDBC-sqlite3
+- GLUT
+- conversion
+- mono-traversable
 
 ghc-options:
 - -Wall
@@ -47,8 +51,8 @@ library:
 
 executables:
   space-station15-client:
-    main:                Client_Main.hs
-    source-dirs:         src
+    main:                Main.hs
+    source-dirs:         client
     ghc-options:
     - -threaded
     - -rtsopts
@@ -56,8 +60,8 @@ executables:
     dependencies:
     - space-station15
   space-station15-server:
-    main:               Server_Main.hs
-    source-dirs:        src
+    main:               Main.hs
+    source-dirs:        server
     ghc-options:
     - -threaded
     - -rtsopts

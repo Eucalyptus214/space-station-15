@@ -7,7 +7,10 @@ module Data.Polar2D
 --import qualified Data.Vector3D
 import Conversion
 
-data Polar2D = Polar2D Float Float deriving (Show, Read)
+data Polar2D = Polar2D Float Float deriving (Show, Read, Eq, Ord)
+
+instance Num Polar2D where
+  (+) (Polar2D l a) (Polar2D l2 a2) = Polar2D (l + l2) (a + a2)
 
 length :: Polar2D
        -> Float

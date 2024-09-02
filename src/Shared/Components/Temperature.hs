@@ -15,7 +15,7 @@ data Temperature = Temperature
   , conductivity :: Float
   } deriving Show
 
-instance Component Temperature where Storage Temperature = Map Temperature
+instance Component Temperature where type Storage Temperature = Map Temperature
 
 calcTempInKelvin :: Temperature
                  -> Temperature
@@ -27,5 +27,5 @@ calcTempInKelvin (Temperature {temp = (Data.Atmos.Kelvin temp_1), heat_cap = hea
 type T = Temperature
 calcTemp :: (T, T)
          -> (T, T)
-calcTemp (t1, t2) = (t1{ temp = (calcTemp t1 t2) }, t2{ temp = (calcTemp t2 t1) })
+calcTemp (t1, t2) = (t1{ temp = (calcTempInKelvin t1 t2) }, t2{ temp = (calcTempInKelvin t2 t1) })
 

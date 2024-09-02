@@ -1,5 +1,3 @@
-module Main (main) where
-
 {-# LANGUAGE DataKinds                  #-}
 {-# LANGUAGE FlexibleContexts           #-}
 {-# LANGUAGE FlexibleInstances          #-}
@@ -10,6 +8,8 @@ module Main (main) where
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE TypeFamilies               #-}
 
+module Main (main) where
+
 import System.Directory
 import Apecs
 import System.Random
@@ -17,8 +17,7 @@ import System.Exit
 import Control.Monad
 import Data.Monoid
 import Data.Semigroup (Semigroup)
-import Prototypes
-import OpenAL
+import Sound.OpenAL
 import SDL
 import Graphics.UI.GLUT
 
@@ -32,14 +31,14 @@ appLoop renderer = do
             keysymKeycode (keyboardEventKeysym keyboardEvent) == KeycodeQ
           _ -> False
       qPressed = any eventIsQPress events
-  rendererDrawColor renderer $= V4 0 0 255 255
-  clear renderer
+  rendererDrawColor renderer Graphics.UI.GLUT.$= V4 0 0 255 255
+  SDL.clear renderer
   present renderer
   unless qPressed (appLoop renderer)
 
 main = do
-    initializeAll
-    window <- createWindow "My SDL Application" defaultWindow
-    renderer <- createRenderer window (-1) defaultRenderer
+    SDL.initializeAll
+    window <- SDL.createWindow "My SDL Application" defaultWindow
+    renderer <- SDL.createRenderer window (-1) defaultRenderer
     appLoop renderer
-    destroyWindow window
+    SDL.destroyWindow window

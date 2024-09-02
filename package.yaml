@@ -21,6 +21,9 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.2 && < 5
+- random
+- template-haskell
+- exceptions
 - gloss
 - sdl2
 - apecs
@@ -29,6 +32,8 @@ dependencies:
 - containers
 - directory
 - OpenAL
+- OpenGL
+- transformers
 - HDBC
 - HDBC-sqlite3
 - GLUT

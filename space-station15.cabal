@@ -39,7 +39,6 @@ library
       Data.Vector2D
       Data.Vector3D
       Imports.Shared
-      Prototypes
       Server_Settings
       Shared.Components.Access
       Shared.Components.Clothing
@@ -67,16 +66,21 @@ library
     , HDBC
     , HDBC-sqlite3
     , OpenAL
+    , OpenGL
     , apecs
     , base >=4.2 && <5
     , containers
     , conversion
     , directory
+    , exceptions
     , gloss
     , mono-traversable
     , network
     , network-udp
+    , random
     , sdl2
+    , template-haskell
+    , transformers
   default-language: Haskell2010
 
 executable space-station15-client
@@ -95,17 +99,22 @@ executable space-station15-client
     , HDBC
     , HDBC-sqlite3
     , OpenAL
+    , OpenGL
     , apecs
     , base >=4.2 && <5
     , containers
     , conversion
     , directory
+    , exceptions
     , gloss
     , mono-traversable
     , network
     , network-udp
+    , random
     , sdl2
     , space-station15
+    , template-haskell
+    , transformers
   default-language: Haskell2010
 
 executable space-station15-server
@@ -121,15 +130,20 @@ executable space-station15-server
     , HDBC
     , HDBC-sqlite3
     , OpenAL
+    , OpenGL
     , apecs
     , base >=4.2 && <5
     , containers
     , conversion
     , directory
+    , exceptions
     , gloss
     , mono-traversable
     , network
     , network-udp
+    , random
     , sdl2
     , space-station15
+    , template-haskell
+    , transformers
   default-language: Haskell2010

@@ -6,16 +6,12 @@ module Shared.Components.Health ( Health(..) ) where
 import Apecs
 import Data.DamageType
 import qualified Data.Map as M
-import Data.MonoTraversable
 import Data.Semigroup
 
 data Health = Health
   { maxHealth :: Float
   , damage :: M.Map DamageType Float
   } deriving Show
-
-instance MonoFunctor Health where
-  omap f health@Health{ damage } = health{ damage = M.fromList (f (M.toList damage)) }
 
 instance Semigroup Health where
   (<>) health@Health{ damage } Health{ damage=damage1 } = health{ damage = (M.fromList ((M.toList damage) ++ (M.toList damage1))) }

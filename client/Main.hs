@@ -20,6 +20,7 @@ import Data.Semigroup (Semigroup)
 import Sound.OpenAL
 import SDL
 import Graphics.UI.GLUT
+import qualified Data.Text as T
 
 appLoop :: Renderer -> IO ()
 appLoop renderer = do
@@ -38,7 +39,7 @@ appLoop renderer = do
 
 main = do
     SDL.initializeAll
-    window <- SDL.createWindow "My SDL Application" defaultWindow
+    window <- SDL.createWindow (T.pack "My SDL Application") defaultWindow
     renderer <- SDL.createRenderer window (-1) defaultRenderer
     appLoop renderer
     SDL.destroyWindow window

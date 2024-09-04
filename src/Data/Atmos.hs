@@ -26,7 +26,9 @@ data Gas = Gas
 type ReactionData = Data.Map.Map ReactionType [Gas]
 
 kelvinToFahrenheit :: Temperature -> String
-kelvinToFahrenheit (Kelvin t) = "Fahrenheit " ++ show (t * 1.8 - 459.67)
+kelvinToFahrenheit (Kelvin t)
+  = "Fahrenheit " ++ show (t * 1.8 - 459.67)
 
 kelvinToCelsius :: Temperature -> String
-kelvinToCelsius (Kelvin t) = "Celsius " ++ show (t - 273.15)
+kelvinToCelsius (Kelvin t)
+  = "Celsius " ++ show (t - 273.15)

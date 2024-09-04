@@ -6,11 +6,11 @@ cabal-version: 1.12
 
 name:           space-station15
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/space-station-15#readme>
+description:    Please see the README on GitHub at <https://github.com/Eucalyptus214/space-station-15#readme>
 homepage:       https://github.com/Eucalyptus214/space-station-15#readme
 bug-reports:    https://github.com/Eucalyptus214/space-station-15/issues
 author:         Eucalyptus
-maintainer:     example@example.com
+maintainer:     execute@erisws.com
 copyright:      2024 Eucalyptus
 license:        MIT
 license-file:   LICENSE
@@ -29,16 +29,15 @@ library
       Data.Atmos
       Data.DamageType
       Data.GunMode
+      Data.Linear.P2
+      Data.Linear.V2
+      Data.Linear.V3
       Data.Material
       Data.Mob
       Data.MovementMode
       Data.Player
-      Data.Polar2D
       Data.StatusEffect
       Data.ToolQuality
-      Data.Vector2D
-      Data.Vector3D
-      Imports.Shared
       Server_Settings
       Shared.Components.Access
       Shared.Components.Clothing
@@ -73,13 +72,13 @@ library
     , conversion
     , directory
     , exceptions
-    , gloss
     , mono-traversable
     , network
     , network-udp
     , random
     , sdl2
     , template-haskell
+    , text
     , transformers
   default-language: Haskell2010
 
@@ -88,8 +87,6 @@ executable space-station15-client
   other-modules:
       Client.Components.Sprite
       Client.Components.Visible
-      Imports.Client
-      Imports.UI
       Paths_space_station15
   hs-source-dirs:
       client
@@ -106,7 +103,6 @@ executable space-station15-client
     , conversion
     , directory
     , exceptions
-    , gloss
     , mono-traversable
     , network
     , network-udp
@@ -114,13 +110,13 @@ executable space-station15-client
     , sdl2
     , space-station15
     , template-haskell
+    , text
     , transformers
   default-language: Haskell2010
 
 executable space-station15-server
   main-is: Main.hs
   other-modules:
-      Imports.Server
       Paths_space_station15
   hs-source-dirs:
       server
@@ -137,7 +133,6 @@ executable space-station15-server
     , conversion
     , directory
     , exceptions
-    , gloss
     , mono-traversable
     , network
     , network-udp
@@ -145,5 +140,6 @@ executable space-station15-server
     , sdl2
     , space-station15
     , template-haskell
+    , text
     , transformers
   default-language: Haskell2010

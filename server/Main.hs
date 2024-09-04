@@ -1,5 +1,3 @@
-module Main (main) where
-
 {-# LANGUAGE DataKinds                  #-}
 {-# LANGUAGE FlexibleContexts           #-}
 {-# LANGUAGE FlexibleInstances          #-}
@@ -10,6 +8,8 @@ module Main (main) where
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE TypeFamilies               #-}
 
+module Main (main) where
+
 import System.Directory
 import Server_Settings
 import Apecs
@@ -18,6 +18,5 @@ import System.Exit
 import Control.Monad
 import Data.Monoid
 import Data.Semigroup (Semigroup)
-import Prototypes
 
 main = putStrLn "Hello, world!"

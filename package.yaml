@@ -3,7 +3,7 @@ version:             0.1.0.0
 github:              "Eucalyptus214/space-station-15"
 license:             MIT
 author:              "Eucalyptus"
-maintainer:          "example@example.com"
+maintainer:          "execute@erisws.com"
 copyright:           "2024 Eucalyptus"
 
 extra-source-files:
@@ -17,11 +17,13 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/space-station-15#readme>
+description:         Please see the README on GitHub at <https://github.com/Eucalyptus214/space-station-15#readme>
 
 dependencies:
 - base >= 4.2 && < 5
-- gloss
+- random
+- template-haskell
+- exceptions
 - sdl2
 - apecs
 - network
@@ -29,11 +31,14 @@ dependencies:
 - containers
 - directory
 - OpenAL
+- OpenGL
+- transformers
 - HDBC
 - HDBC-sqlite3
 - GLUT
 - conversion
 - mono-traversable
+- text
 
 ghc-options:
 - -Wall

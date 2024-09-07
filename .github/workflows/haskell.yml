@@ -17,7 +17,7 @@ jobs:
     - name: start
       run: ghcup upgrade
     - uses: actions/checkout@v4
-    - uses: actions/setup-haskell@v2
+    - uses: actions/setup-haskell@v1
       with:
         ghc-version: "9.10.1"
     - name: Cache

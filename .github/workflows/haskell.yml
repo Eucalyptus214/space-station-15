@@ -14,8 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: start
-      run: ghcup upgrade
     - uses: actions/checkout@v4
     - uses: actions/setup-haskell@v1
       with:

@@ -2,24 +2,23 @@ name: Haskell CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 permissions:
   contents: read
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-haskell@v1
       with:
-        ghc-version: '8.10.3'
-        cabal-version: '3.2'
+        ghc-version: "8.10.3"
+        cabal-version: "3.2"
 
     - name: Cache
       uses: actions/cache@v3
@@ -35,6 +34,9 @@ jobs:
 
     - name: Install dependencies
       run: |
+        apt install libsdl2-dev
+        apt install libopenal-dev
+        apt install libsqlite3-dev
         cabal update
         cabal build --only-dependencies --enable-tests --enable-benchmarks
     - name: Build
